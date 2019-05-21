@@ -1,0 +1,48 @@
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Rechner</title>
+    <script type="text/javascript" src="lab.js"></script>
+    <link rel="stylesheet" href="lab.css">
+  </head>
+
+  <body id="calc">
+
+    <table>
+      <tr>
+        <td class="sidetd1"></td>
+        <td><h1 class="tophead">Formel-Rechner für Geschwindigkeiten</h1></td>
+        <td class="sidetd1"></td>
+      </tr>
+    </table>
+
+    <div class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="speedcalc.html">Rechner</a></li>
+        <li><a href="http://www.quanten.de/forum/">Forum</a></li>
+        <li><a href="reference.html">Reference</a></li>
+      </ul>
+    </div>
+
+    <table class="main">
+      <tr>
+        <td class="main1" style="width: 50%"><h4 class="mainhead">Für den freien Fall (kein Luftwiderstand)</h4><br>
+          <form name="freifall">
+            <input type="number" id="heightfree" value="">Höhe in Meter</input><br>
+            <input type="number" id="gravfree" value="">Beschleunigungskraft in m/s^-2 (Standart: 9,81 m/s^-2)</input><br>
+            <p>Einheit:</p><br>
+            <input type="radio" id="pre" name="unit" value="ms">m/s</input>
+            <input type="radio" name="unit" value="kmh">km/h</input><br>
+            <input type="text" id="outfree" value="">Ergebnis</input><br>
+            <button type="button" name="confirm" onclick="getElementById("outfree").value = freifall()">Berechnen</button>
+          </form>
+          </td>
+        <td class="main2">      </td>
+
+
+      </tr>
+    </table>
+
+  </body>
+</html>
