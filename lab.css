@@ -1,0 +1,81 @@
+body{
+  background-color: #222222;
+}
+#index{
+  background-image: url(pictures/space_hd.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#calc{
+  background-image: url(pictures/atom.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.tophead{
+  color: #44bbbb;
+  background-color: black;
+  text-align: center;
+  z-index: 1;
+}
+
+table{
+  margin-top: 15px;
+}
+
+
+
+.sidetd1{
+  width: 39%;
+}
+
+.nav{
+  position: absolute;
+  width: 130px;
+  margin-left: 15px;
+  color: #ffffff;
+  background-color: navy;
+  border-style: solid;
+  border-color: black;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+.main1{
+  border: solid 1px black;
+  width: 25%;
+  padding-left: 25px;
+}
+
+.main2{
+  border: solid 1px black;
+  width: 50%;
+  padding-left: 25px;
+}
+
+.main{
+  border: 1px solid black;
+  border-collapse: separate;
+  color: MediumAquamarine;
+  background-color: #444455;
+  margin-left: 8%;
+  margin-right: 8%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.mainhead{
+  color: white;
+  padding-left: 15px;
+}
