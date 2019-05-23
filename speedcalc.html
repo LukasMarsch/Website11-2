@@ -20,29 +20,83 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="speedcalc.html">Rechner</a></li>
-        <li><a href="http://www.quanten.de/forum/">Forum</a></li>
+        <li><a target="_blank" href="http://www.quanten.de/forum/">Forum</a></li>
         <li><a href="reference.html">Reference</a></li>
       </ul>
     </div>
 
     <table class="main">
       <tr>
-        <td class="main1" style="width: 50%"><h4 class="mainhead">Für den freien Fall (kein Luftwiderstand)</h4><br>
+        <td class="main1" style="width: 50%">
           <form name="freifall">
-            <input type="number" id="heightfree" value="">Höhe in Meter</input><br>
-            <input type="number" id="gravfree" value="">Beschleunigungskraft in m/s^-2 (Standart: 9,81 m/s^-2)</input><br>
-            <p>Einheit:</p><br>
-            <input type="radio" id="pre" name="unit" value="ms">m/s</input>
+	    <h4 class="mainhead">Freier Fall (ohne Luftwiderstand)</h4><br>
+            <input type="text" id="heightfree" value="">Höhe in Meter</input><br><br>
+            <input type="text" id="gravfree" value="">Beschleunigungskraft in m/s^-2 <br>(Standart: 9,81 m/s^-2)</input><br><br>
+            <span>Einheit:</span><br>
+            <input type="radio" name="unit" value="ms">m/s</input>
             <input type="radio" name="unit" value="kmh">km/h</input><br>
-            <input type="text" id="outfree" value="">Ergebnis</input><br>
-            <button type="button" name="confirm" onclick="getElementById("outfree").value = freifall()">Berechnen</button>
+            <input type="text" name="outfree" value="">Ergebnis</input><br>
+            <button type="button" onclick="freifall.outfree.value = keinwiderstand()">Berechnen</button>
+	    <button type="reset">Löschen</button>
           </form>
           </td>
-        <td class="main2">      </td>
+        <td class="main2" style="width:50%">
+	  <form name="luftfall">
+	    <h4 class="mainhead">Fall mit Luftwiderstand</h4><br>
+            <input type="text" id="heightluft" value="">Höhe in Meter</input><br><br>
+            <input type="text" id="gravluft" value="">Beschleunigungskraft in m/s^-2<br> (kann frei sein)</input><br><br>
+            <span>Einheit:</span><br>
+            <input type="radio" name="unitluft" value="ms">m/s</input>
+            <input type="radio" name="unitluft" value="kmh">km/h</input><br>
+            <input type="text" name="outluft" value="">Ergebnis</input><br>
+            <button type="button" onclick="luftfall.outluft.value = airfall()">Berechnen</button>
+            <button type="button" onclick="del()">Löschen</button>
+	  </form>
+	</td>
+      </tr>
+      <tr>
+	<td colspan="2" style="text-align:center">
+	<h3>Bitte wählen Sie weitere Werte für den Fall mit Luftwiderstand</h3>
+	</td>
+      </tr>
+      <form name="airval">
+      <tr>
+	<td class="sidetd1" style="width:50%">
+	  <input type="text" name="temp" value="">Temperatur in °C</input><br><br>
+	  <input type="text" name="area" value="">effektive Fläche in m²</input><br><br>
+	  <input type="text" name="mass" value="">Masse in kg</input>
+	</td>
+
+	<td class="sidetd1" style="width:50%">
+	  <select name="cwvalue" size="3">
+	    <option value="2.0">lange Rechteckplatte</option>
+	    <option value="0.8">Mensch, stehend</option>
+	    <option value="0.6">Fahrrad, aufrecht</option>
+	    <option value="0.45">Kugel</option>
+	    <option value="0.08">Flugzeug</option>
+	    <option value="0.02">Stromlinienkörper</option>
+	  </select>
+	  <p>Fallendes Objekt</p>
+	</td>
+      </tr>
+      </form>
+
+      <tr>
+	<td></td>
+	<td></td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+	<td></td>
+	<td></td>
+	<td></td>
+      </tr>
+      <tr>
 
 
       </tr>
     </table>
-
   </body>
 </html>
